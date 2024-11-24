@@ -1,11 +1,11 @@
-package team.brian.sprintstudy
+package team.brian.async
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SprintStudyApplication
+class AsyncApplication
 
 fun main(args: Array<String>) {
-    runApplication<SprintStudyApplication>(*args)
+    runApplication<AsyncApplication>(*args)
 }
