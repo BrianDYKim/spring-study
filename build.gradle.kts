@@ -110,9 +110,11 @@ configure(subprojects.filter { it.name !in nonDependencyProjects }) {
 tasks {
     named<Jar>("jar") {
         enabled = true
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     }
 
     named<BootJar>("bootJar") {
-        enabled = false
+        enabled = true
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     }
 }
