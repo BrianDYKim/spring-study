@@ -31,7 +31,7 @@ class ProductService(
         val beforeThreadContext = Thread.currentThread().name
 
         val asyncResult1 = runBlocking {
-            async { performAsync() }.await()
+            async { performAsync(1) }.await()
         }
 
         println(asyncResult1)
@@ -46,7 +46,7 @@ class ProductService(
         // 비동기는 이렇게 처리하는게 옳은듯함
         val asyncResult2 = runBlocking {
             IntRange(1, 10)
-                .map { async { performAsync() } }
+                .map { async { performAsync(it) } }
                 .awaitAll()
         }
 
@@ -62,8 +62,8 @@ class ProductService(
         return foundProduct2
     }
 
-    private suspend fun performAsync(): String {
+    private suspend fun performAsync(index: Int): String {
         delay(5000L)
-        return "done!"
+        return "done!${index}"
     }
 }
