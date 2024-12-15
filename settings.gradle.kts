@@ -37,6 +37,6 @@ fun File.registerSubDirectoriesAsModule() {
 }
 
 // 모듈 등록
-listOf("async")
+listOf("async", "kotlin-tx")
     .map { File(it) }
     .map { it.registerSubDirectoriesAsModule() }
