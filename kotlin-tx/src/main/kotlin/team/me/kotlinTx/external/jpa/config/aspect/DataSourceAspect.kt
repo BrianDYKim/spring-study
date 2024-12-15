@@ -14,10 +14,11 @@ import team.me.kotlinTx.external.jpa.config.datasource.DataSourceContextHolder
 class DataSourceAspect {
     @Before("@annotation(mainDataSourceTransactional)")
     fun setMainDataSource(mainDataSourceTransactional: MainDataSourceTransactional) {
-        if (mainDataSourceTransactional.readOnly) {
-            DataSourceContextHolder.setDataSourceType(DataSourceTypes.MAIN_READ)
-        } else {
-            DataSourceContextHolder.setDataSourceType(DataSourceTypes.MAIN_WRITE)
+        val dataSourceType = when(mainDataSourceTransactional.readOnly) {
+            true -> DataSourceTypes.MAIN_READ
+            false -> DataSourceTypes.MAIN_WRITE
         }
+
+        DataSourceContextHolder.setDataSourceType(dataSourceType)
     }
 }
