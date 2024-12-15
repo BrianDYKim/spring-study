@@ -1,4 +1,4 @@
-package team.me.kotlinTx.jpa.config
+package team.me.kotlinTx.external.jpa.config
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing

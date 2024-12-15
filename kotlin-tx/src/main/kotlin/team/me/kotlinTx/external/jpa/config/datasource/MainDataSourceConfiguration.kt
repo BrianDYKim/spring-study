@@ -1,4 +1,4 @@
-package team.me.kotlinTx.jpa.config.datasource
+package team.me.kotlinTx.external.jpa.config.datasource
 
 import jakarta.persistence.EntityManagerFactory
 import org.springframework.beans.factory.annotation.Qualifier
@@ -12,12 +12,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 import org.springframework.orm.jpa.JpaTransactionManager
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean
 import org.springframework.transaction.PlatformTransactionManager
-import team.me.kotlinTx.jpa.config.dataSourceTypes.DataSourceTypes
+import team.me.kotlinTx.external.jpa.config.dataSourceTypes.DataSourceTypes
 import javax.sql.DataSource
 
 @Configuration
 @EnableJpaRepositories(
-    basePackages = ["team.me.kotlinTx.jpa.mainDataSource"],
+    basePackages = ["team.me.kotlinTx.external.jpa.mainDataSource"],
     entityManagerFactoryRef = "mainEntityManagerFactory",
     transactionManagerRef = "mainTransactionManager",
 )
@@ -81,7 +81,7 @@ class MainDataSourceConfiguration(
 
         return builder
             .dataSource(dataSource)
-            .packages("com.tutoring.externals.jpa.mainDataSource")
+            .packages("team.me.kotlinTx.external.jpa.mainDataSource")
             .persistenceUnit("main")
             .properties(properties)
             .build()

@@ -1,4 +1,4 @@
-package team.me.kotlinTx.jpa.config.annotation.transactional
+package team.me.kotlinTx.external.jpa.config.annotation.transactional
 
 import org.springframework.core.annotation.AliasFor
 import org.springframework.transaction.annotation.Transactional

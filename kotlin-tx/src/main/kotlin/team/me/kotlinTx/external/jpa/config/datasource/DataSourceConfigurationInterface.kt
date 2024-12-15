@@ -1,4 +1,4 @@
-package team.me.kotlinTx.jpa.config.datasource
+package team.me.kotlinTx.external.jpa.config.datasource
 
 import jakarta.persistence.EntityManagerFactory
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder

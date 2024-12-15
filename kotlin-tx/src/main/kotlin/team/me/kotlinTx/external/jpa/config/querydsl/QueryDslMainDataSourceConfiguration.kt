@@ -1,4 +1,4 @@
-package team.me.kotlinTx.jpa.config.querydsl
+package team.me.kotlinTx.external.jpa.config.querydsl
 
 import com.querydsl.jpa.impl.JPAQueryFactory
 import jakarta.persistence.EntityManager

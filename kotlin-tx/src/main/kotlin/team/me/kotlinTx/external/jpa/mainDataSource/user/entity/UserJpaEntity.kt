@@ -1,4 +1,4 @@
-package team.me.kotlinTx.jpa.mainDataSource.user.entity
+package team.me.kotlinTx.external.jpa.mainDataSource.user.entity
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
@@ -34,4 +34,13 @@ open class UserJpaEntity() {
 
     @Column(name = "deleted_at", nullable = true)
     open var deletedAt: LocalDateTime? = null
+
+    companion object {
+        fun of(name: String, email: String): UserJpaEntity {
+            return UserJpaEntity().apply {
+                this.name = name
+                this.email = email
+            }
+        }
+    }
 }

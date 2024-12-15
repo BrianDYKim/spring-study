@@ -1,4 +1,4 @@
-package team.me.kotlinTx.jpa.config.datasource
+package team.me.kotlinTx.external.jpa.config.datasource
 
 object HibernateProperties {
     fun getPropertiesMap(dialect: String): Map<String, String> {

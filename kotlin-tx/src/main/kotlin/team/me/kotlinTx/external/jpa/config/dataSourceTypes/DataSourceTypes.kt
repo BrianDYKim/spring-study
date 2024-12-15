@@ -1,4 +1,4 @@
-package team.me.kotlinTx.jpa.config.dataSourceTypes
+package team.me.kotlinTx.external.jpa.config.dataSourceTypes
 
 enum class DataSourceTypes(val dataSourceKey: String) {
     MAIN_WRITE("MAIN_WRITE"),

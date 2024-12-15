@@ -1,6 +1,6 @@
-package team.me.kotlinTx.jpa.config.datasource
+package team.me.kotlinTx.external.jpa.config.datasource
 
-import team.me.kotlinTx.jpa.config.dataSourceTypes.DataSourceTypes
+import team.me.kotlinTx.external.jpa.config.dataSourceTypes.DataSourceTypes
 
 object DataSourceContextHolder {
     private val contextHolder = ThreadLocal<DataSourceTypes>()
