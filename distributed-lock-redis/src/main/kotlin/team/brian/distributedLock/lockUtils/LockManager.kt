@@ -1,4 +1,4 @@
-package team.brian.distributedLock
+package team.brian.distributedLock.lockUtils
 
 import org.springframework.data.redis.core.RedisTemplate
 import org.springframework.stereotype.Component

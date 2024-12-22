@@ -1,4 +1,4 @@
-package team.brian.distributedLock
+package team.brian.distributedLock.lockUtils
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
