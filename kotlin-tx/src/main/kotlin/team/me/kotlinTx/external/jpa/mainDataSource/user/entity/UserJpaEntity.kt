@@ -8,11 +8,12 @@ import jakarta.persistence.Id
 import jakarta.persistence.Table
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
+import team.me.kotlinTx.external.jpa.config.entity.BaseJpaEntity
 import java.time.LocalDateTime
 
 @Entity
 @Table(name = "users")
-open class UserJpaEntity() {
+open class UserJpaEntity : BaseJpaEntity() {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

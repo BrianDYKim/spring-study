@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional
 @Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
 @Retention(AnnotationRetention.RUNTIME)
 @MustBeDocumented
-@Transactional
+@Transactional(transactionManager = "mainTransactionManager")
 annotation class MainDataSourceTransactional(
     @get:AliasFor(annotation = Transactional::class, attribute = "readOnly")
     val readOnly: Boolean = false,

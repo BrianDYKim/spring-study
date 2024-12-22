@@ -27,6 +27,11 @@ class UserController(
         return userService.updateName(request)
     }
 
+    @PutMapping("/user/name/tx")
+    fun updateNameWithTx(@RequestBody request: UpdateUserNameDto.Request): UpdateUserNameDto.Response? {
+        return userService.updateNameWithTx(request)
+    }
+
     @GetMapping("/user/{id}")
     fun findById(@PathVariable(name = "id") id: Long): FindUserDto.Response {
         val request = FindUserDto.Request(id)
